@@ -1,0 +1,144 @@
+
+div.synology p {margin: 0px;}
+div.synology .folders button {width: 200px; display: block;}
+div.synology img{width: 500px;}
+
+div.synology .folders div{
+	cursor: pointer;
+}
+
+
+div.synology .folders{
+	margin-top: 10px;
+	border-top: 1px solid gray;
+	padding-top: 5px;
+}
+
+
+div.synology .folders div{
+	-webkit-animation: fadein 0.5s;
+	-moz-animation: fadein 0.5s;
+	-ms-animation: fadein 0.5s;
+	-o-animation: fadein 0.5s;
+	animation: fadein 0.5s;
+}
+
+
+
+
+
+
+
+
+/* LIST MODE */
+div.synology .folders div.listview{
+	white-space: nowrap;
+}
+
+div.synology .folders div img.listmodethumb{
+	width: 20px;
+	height: 20px;
+}
+
+div.synology .folders div.listview p{
+	display: inline-block;
+	overflow: hidden;
+	font-size: 20px;
+	opacity: 1;
+	white-space: nowrap;
+}
+
+div.synology .folders div img{
+	display: inline-block;
+	margin-right: 5px;
+
+}
+
+div.synology div.imgloading{
+	background-size: 30px 30px !important;
+}
+
+
+
+/* THUMBNAIL MODE */
+div.synology .folders div.thumbview{
+	float: left; 
+	margin: 3px;
+	width: 165px;
+	height: 140px;
+	text-align: center;
+	/*border: 1px solid rgba(0, 0, 0, 0);*/
+	/*border: 1px solid gray;*/
+	position: relative;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+div.synology .folders div.thumb{
+   	background-size: cover;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+}
+
+div.synology .folders div.thumbview img{
+	width: 160px;;
+	height: auto;
+	max-height: 160px;;
+	text-align: center;
+}
+div.synology .folders div.thumbview p{
+	padding: 0px;
+	padding-left: 3px;
+	padding-right: 3px;
+	overflow: hidden;
+	margin: 0px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: absolute;
+	top: 70px;
+	width: 125px;
+	left: 20px;
+	font-size: 80%;
+	
+}
+
+
+/* MISC */
+div.synologycontentview {}
+div.synologycontentview{
+	width: 100%;
+	height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+div.synology img.synologybutton {
+	height: 50px;
+	width: 50px;
+    cursor: pointer;
+    margin-right: 10px;
+	opacity:1;
+	transition: opacity 0.5s;
+}
+.no-touch div.synology img.synologybutton:hover{
+	background-image: -webkit-radial-gradient(center center, circle contain, rgba(50, 50, 50, 0.3), rgba(0,0,0,0)); 
+	transition: background-image 1s;
+}
+.no-touch div.synology img.synologybutton:active{
+	background-image: -webkit-radial-gradient(center center, circle contain, rgba(50, 50, 50, 0.5), rgba(0,0,0,0)); 
+	transition: background-image 1s;
+}
+
+
+div.synology img.synologybutton.synologydisabled{
+	pointer-events:none;
+	opacity:0.4;
+}
+
+div.synology img.synologylistbutton{
+	margin-left: 50px;
+}

@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>Synology Browser</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8,IE=edge" />
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="shortcut icon" sizes="1024x1024" href="/folder.png">
+
+	<link rel="stylesheet" type="text/css" href="/css/framework_merged.css" />
+	<link rel="stylesheet" type="text/css" href="/synology/css/main.css" />
+
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="/js/all.js"></script>
+	<script src="/synology/js/synologybrowser.js"></script>
+
+
+
+	<script src="/js/imageviewer.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/imageviewer.css" />
+
+	<style type="text/css">
+		body{
+			background: -webkit-linear-gradient(top, #eeeeee, #dddddd);
+			background: -moz-linear-gradient(top, #eeeeee, #dddddd);
+			-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#eeeeee,endColorstr=#dddddd)";
+			background: -ms-linear-gradient(top, #eeeeee, #dddddd);
+		}
+	</style>
+
+</head>
+<body>
+
+<div id="synologymain" class="synology"></div>
+
+<script>
+	$(function(){
+		new SynologyBrowser($("#synologymain")).run();
+	});
+</script>
+
+</body>
+</html>
