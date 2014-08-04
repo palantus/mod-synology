@@ -6,7 +6,7 @@ function SynologyBrowser(_element){
 	this.folderHistory = [];
 	this.curPath = "";
 	this.imageExtensions = ["jpg", "jpeg", "png", "gif", "tif"];
-	this.videoExtensions = ["mp4", "avi", "mpg", "mpeg", "mkv", "m4v"];
+	this.videoExtensions = ["mp4", "avi", "mpg", "mpeg", "mkv", "m4v", "mov"];
 	this.element = _element;
 	this.thumbView = false;
 	this.currentImages = [];
@@ -93,14 +93,10 @@ SynologyBrowser.prototype.run = function(){
 				}
 
 				form.element.find("#logoutcontrols button").click(function(){
-					/*
-					request({module:"user", type: "logout"}, function(res){
-						if(res.success)
-							setLoggedIn(false);
-						else
-							alert("Failed to log out.");
-					});
-					*/
+					t.sid = "";
+					t.loggedInToNAS = false;
+					setLoggedIn(false);
+					t.element.find(".folders").empty();
 				});
 
 				form.element.find("#logincontrols button").click(function(){
@@ -193,8 +189,6 @@ SynologyBrowser.prototype.sendRequest = function(req, callback){
 		req.type = "ExternalRequest";
 	if(req.method === undefined)
 		req.method = "GET";
-	if(req.isHome === undefined)
-		req.isHome = true;
 	if(req.vars._sid === undefined && this.sid != "" && this.sid !== undefined)
 		req.vars._sid = this.sid;
 
@@ -209,11 +203,12 @@ SynologyBrowser.prototype.sendRequest = function(req, callback){
 		console.log(response);
 		callback(response);
 	}, function(e) {
-		prompt( "ERROR - please report: ", JSON.stringify(e.message) );
+		prompt( "ERROR - please report: ", e.message || e.error);
 	});
 }
 
 SynologyBrowser.prototype.getShares = function(callback){
+	var t = this;
 	var req = { api: "FileStation/file_share.cgi", vars: {api: "SYNO.FileStation.List", version: 1, method: "list_share", additional: ""}};
 	
 	this.sendRequest(req, function(reply){
@@ -221,6 +216,7 @@ SynologyBrowser.prototype.getShares = function(callback){
 			console.log("Error when refreshing: ", reply);
 			callback({error: "error"});
 		} else {
+			t.loggedInToNAS = true;
 			callback(reply);
 		}
 	});
@@ -353,6 +349,7 @@ SynologyBrowser.prototype.loadImagesInBackground = function(folderPath, callback
 }
 
 SynologyBrowser.prototype.getFolderContent = function(folderPath, callback){
+	var t = this;
 	var req = { api: "FileStation/file_share.cgi", vars: {api: "SYNO.FileStation.List", version: 1, method: "list", additional: "type", folder_path: folderPath}};
 	
 	this.sendRequest(req, function(reply){
@@ -360,6 +357,7 @@ SynologyBrowser.prototype.getFolderContent = function(folderPath, callback){
 			console.log("Error when refreshing: ", reply);
 			callback({error: "error"});
 		} else {
+			t.loggedInToNAS = true;
 			callback(reply);
 		}
 	});
