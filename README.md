@@ -59,12 +59,12 @@ Browsing images is working fine, but videos aren't centered correctly. I still h
 ## Screenshots ##
 Listing root folders in list view:
 
-![](https://github.com/palantus/mod-synology/blob/master/www/screens/folderlist.png)
+![](https://github.com/palantus/mod-synology/blob/master/screens/folderlist.png)
 
 Listing folders in thumb view:
 
-![](https://github.com/palantus/mod-synology/blob/master/www/screens/folderlist_thumb.png)
+![](https://github.com/palantus/mod-synology/blob/master/screens/folderlist_thumb.png)
 
 Listing content of a folder with images in thumb view:
 
-![](https://github.com/palantus/mod-synology/blob/master/www/screens/imagelist_thumb.png)
+![](https://github.com/palantus/mod-synology/blob/master/screens/imagelist_thumb.png)
