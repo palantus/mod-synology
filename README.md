@@ -56,6 +56,8 @@ Open the following URL in your browser:
 ## Status ##
 Browsing images is working fine, but videos aren't centered correctly. I still haven't added support for downloading files, but the code for the download URL is already written.
 
+Images are opened in full screen when clicked and you can click on the page to go to prev/next or close fullscreen view. Zooming is unfortunatly not implemented yet.
+
 ## Screenshots ##
 Listing root folders in list view:
 
