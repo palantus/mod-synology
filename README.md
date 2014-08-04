@@ -20,6 +20,7 @@ Create a config.json file in either the folder with serverplatform or the one ab
 Paste something like this in it:
 
 	{
+		"port" : 3000,
 		"www": "../www",
 		"modules": "../modules",
 
@@ -50,7 +51,7 @@ Go to serverplatform and run:
 
 Open the following URL in your browser:
 
-	http://localhost/synology
+	http://localhost:3000/synology
 
 ## Status ##
 Browsing images is working fine, but videos aren't centered correctly. I still haven't added support for downloading files, but the code for the download URL is already written.
