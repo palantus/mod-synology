@@ -31,7 +31,7 @@ Paste something like this in it:
 		"AutoSSLRedirection" : false,
 
 		"    SYNOLOGY MODULE    ":"",
-		"SynologyURL" : "https://nas.ahkpro.dk"
+		"SynologyURL" : "https://YOURSERVER"
 	}
 
 The SSL section can be skipped if you haven't got a certificate. If your Synology NAS hasn't got SSL setup, just remove the 's' in 'https' from SynologyURL.
