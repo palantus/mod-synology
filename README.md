@@ -4,9 +4,9 @@ mod-synology
 Ability to browse a Synology NAS for images and videos.
 
 ## Screenshots ##
-![](https://github.com/palantus/mod-synology/blob/master/screens/folderlist.png)
-![](https://github.com/palantus/mod-synology/blob/master/screens/folderlist_thumb.png)
-![](https://github.com/palantus/mod-synology/blob/master/screens/imagelist_thumb.png)
+![](https://github.com/palantus/mod-synology/blob/master/www/screens/folderlist.png)
+![](https://github.com/palantus/mod-synology/blob/master/www/screens/folderlist_thumb.png)
+![](https://github.com/palantus/mod-synology/blob/master/www/screens/imagelist_thumb.png)
 
 ## Installation ##
 
