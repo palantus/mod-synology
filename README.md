@@ -18,6 +18,7 @@ Then checkout this module in another folder:
 Create a config.json file in either the folder with serverplatform or the one above it.
 
 Paste something like this in it:
+
 	{
 		"www": "../www",
 		"modules": "../modules",
