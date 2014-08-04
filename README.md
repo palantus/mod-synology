@@ -1,7 +1,7 @@
 mod-synology
 ============
 
-Ability to browse a Synology NAS for images and videos.
+Server and client code for browsing a Synology NAS
 
 ## Installation ##
 
